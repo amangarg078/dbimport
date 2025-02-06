@@ -3,6 +3,7 @@ from rest_framework import generics
 from .models import Location
 from .serializers import LocationSerializer
 
+
 class LocationListCreateView(generics.ListCreateAPIView):
     """
     API view for listing and creating locations.

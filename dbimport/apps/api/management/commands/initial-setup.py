@@ -8,7 +8,9 @@ class Command(BaseCommand):
     help = 'Import locations from a JSON file into the database'
 
     def handle(self, *args, **options):
-        json_file_path = 'ports.json'
+        json_file_path = getattr(settings, "IMPORT_FILE_LOCATION")
+        if not json_file_path:
+            raise ValueError("Please provide the path to the file using setting.IMPORT_FILE_LOCATION.")
 
         with open(json_file_path, 'r') as file:
             data = json.load(file)

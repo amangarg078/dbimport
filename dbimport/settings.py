@@ -139,8 +139,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 IMPORT_BATCH_SIZE = 500
+IMPORT_FILE_LOCATION = "ports.json"
 
-# settings.py
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,  # Number of items per page
