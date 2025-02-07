@@ -40,3 +40,26 @@ python manage.py test dbimport.apps.api
 ```
 python manage.py runserver 
 ```
+
+7. To make POST/PUT/PATCH calls, use the following json
+```
+{
+    "code": "52000",
+    "name": "Ajman",
+    "city": "Ajman",
+    "country": "United Arab Emirates",
+    "coordinates": [
+        55.5136433,
+        25.4052165
+    ],
+    "province": "Ajman",
+    "timezone": "Asia/Dubai",
+    "alias": [],
+    "regions": [],
+    "unlocs": [
+        "AEAJO"    
+    ]
+}
+```
+
+`unlocs` list is required param, every value needs to be of lenght = 5, and contain upper case alphabets or digits.
